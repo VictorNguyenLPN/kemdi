@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const slides = [
   {
@@ -24,13 +24,15 @@ const slides = [
 export default function ImageSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef(null);
+  const touchDelta = useRef(0);
 
   useEffect(() => {
     if (isPaused) return;
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 3000); // Auto-slide every 5 seconds
+    }, 3000); // Auto-slide every 3 seconds
 
     return () => clearInterval(interval);
   }, [isPaused, currentSlide]);
@@ -55,11 +57,39 @@ export default function ImageSlider() {
     setIsPaused(false);
   };
 
+  // Touch/Swipe handlers for mobile
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchDelta.current = 0;
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchStartX.current === null) return;
+    const currentX = e.touches[0].clientX;
+    touchDelta.current = currentX - touchStartX.current;
+  };
+
+  const handleTouchEnd = () => {
+    const threshold = 50; // px to trigger swipe
+    if (touchDelta.current > threshold) {
+      prevSlide();
+    } else if (touchDelta.current < -threshold) {
+      nextSlide();
+    }
+    touchStartX.current = null;
+    touchDelta.current = 0;
+    setIsPaused(false);
+  };
+
   return (
     <div
       className="relative w-full h-[500px] md:h-[600px] overflow-hidden rounded-3xl shadow-2xl group"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Slides */}
       {slides.map((slide, index) => (
