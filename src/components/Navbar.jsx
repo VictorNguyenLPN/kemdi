@@ -23,7 +23,10 @@ export default function Navbar() {
               className="group-hover:scale-110 transition-transform w-12 rounded-full"
               src="/LOGO.png"
             />
-            <span className="text-2xl font-bold text-pink-600">Kem Đi</span>
+            <img
+              className="group-hover:scale-110 transition-transform h-10 rounded-full pt-1"
+              src="/KEMDI.png"
+            />
           </Link>
 
           {/* Desktop Navigation */}

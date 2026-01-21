@@ -1,10 +1,20 @@
 import React, { useState } from "react";
-import durianImg from "../../images/icecream-flavour/SauRieng.png";
-import mangoImg from "../../images/icecream-flavour/Xoai.png";
-import dragonFruitImg from "../../images/icecream-flavour/ThanhLong.png";
-import tomatoImg from "../../images/icecream-flavour/CaChua.png";
-import mangosteenImg from "../../images/icecream-flavour/MangCut.png";
-import berryImg from "../../images/icecream-flavour/VietQuat.png";
+import SauRiengCaiMon from "../../images/icecream-flavour/SauRiengCaiMon.png";
+import XoaiCatHoaLoc from "../../images/icecream-flavour/XoaiCatHoaLoc.png";
+import MangCutLaiThieu from "../../images/icecream-flavour/MangCutLaiThieu.png";
+import MitToNu from "../../images/icecream-flavour/MitToNu.png";
+import CamVinh from "../../images/icecream-flavour/CamVinh.png";
+import ThanhLongRuotDo from "../../images/icecream-flavour/ThanhLongRuotDo.png";
+import DuaHauDo from "../../images/icecream-flavour/DuaHauDo.png";
+import VuSuaLoRen from "../../images/icecream-flavour/VuSuaLoRen.png";
+import DuDuChin from "../../images/icecream-flavour/DuDuChin.png";
+import OiNuHoang from "../../images/icecream-flavour/OiNuHoang.png";
+import DuaLuoiNgot from "../../images/icecream-flavour/DuaLuoiNgot.png";
+import ChanhDay from "../../images/icecream-flavour/ChanhDay.png";
+import KheChuaNgot from "../../images/icecream-flavour/KheChuaNgot.png";
+import ChanhMeLy from "../../images/icecream-flavour/ChanhMeLy.png";
+import DuaBenTre from "../../images/icecream-flavour/DuaBenTre.png";
+
 import melonImg from "../../images/new-flavour/AmazingMelon.png";
 import mangosteenDelightImg from "../../images/new-flavour/MangosteenDelight.png";
 import papayaImg from "../../images/new-flavour/PapayaPradise.png";
@@ -12,137 +22,144 @@ import papayaImg from "../../images/new-flavour/PapayaPradise.png";
 const gelatoFlavors = [
   {
     id: 1,
-    name: "Sầu Riêng Cát Chu",
+    name: "Sầu Riêng Cái Mơn",
     category: "Seasonal",
-    description: "Sầu riêng cát chu đặc sản vùng Cát Chu, Phú Thọ",
+    description:
+      "Béo ngậy nồng nàn từ vua trái cây miền Tây, tan chảy quyến rũ trong từng lớp kem dẻo mịn.",
     color: "from-yellow-200 to-yellow-400",
-    image: durianImg,
+    image: SauRiengCaiMon,
   },
   {
     id: 2,
     name: "Xoài Cát Hòa Lộc",
     category: "Seasonal",
-    description: "Xoài Cát Hòa Lộc chín mọng từ Đồng Tháp",
+    description:
+      "Vị ngọt thanh tao, thơm lừng đặc trưng của giống xoài quý, mang đến cảm giác mọng nước tức thì.",
     color: "from-orange-200 to-yellow-300",
-    image: durianImg,
+    image: XoaiCatHoaLoc,
   },
   {
     id: 3,
-    name: "Dừa Bến Tre",
+    name: "Măng Cụt Lái Thiêu",
     category: "Classic",
-    description: "Nước dừa tươi từ vườn dừa Bến Tre",
+    description:
+      "Sự kết hợp tinh tế giữa vị chua nhẹ và ngọt thanh, mát lạnh như gió bãi bồi.",
     color: "from-white to-gray-100",
-    image: durianImg,
+    image: MangCutLaiThieu,
   },
   {
     id: 4,
-    name: "Dâu Tây Đà Lạt",
+    name: "Mít Tố Nữ",
     category: "Seasonal",
-    description: "Dâu tây tươi từ cao nguyên Đà Lạt",
+    description:
+      "Hương mít nồng nàn, ngọt đậm đà khó cưỡng, gợi nhớ những thức quà quê chân phương.",
     color: "from-pink-200 to-red-300",
-    image: durianImg,
+    image: MitToNu,
   },
   {
     id: 5,
-    name: "Cà Phê Buôn Ma Thuột",
+    name: "Cam Vinh",
     category: "Classic",
-    description: "Robusta nguyên chất từ Tây Nguyên",
+    description:
+      "Giải nhiệt tức thì với vị cam mọng nước, giàu Vitamin và sảng khoái đến từng thìa kem.",
     color: "from-amber-700 to-brown-900",
-    image: durianImg,
+    image: CamVinh,
   },
   {
     id: 6,
     name: "Thanh Long Ruột Đỏ",
     category: "Seasonal",
-    description: "Thanh long ruột đỏ Bình Thuận",
+    description:
+      "Visual rực rỡ từ sắc tím tự nhiên, vị thanh nhẹ nhàng cho một ngày nắng rạng rỡ.",
     color: "from-fuchsia-200 to-pink-400",
-    image: durianImg,
+    image: ThanhLongRuotDo,
   },
   {
     id: 7,
-    name: "Bơ Đắk Lắk",
+    name: "Dưa Hấu Đỏ",
     category: "Classic",
-    description: "Bơ 034 thơm béo từ Đắk Lắk",
+    description:
+      "Mát lạnh sảng khoái, mang trọn vẹn sự tinh khiết của mùa hè vào trong hũ kem của bạn.",
     color: "from-green-300 to-lime-400",
-    image: durianImg,
+    image: DuaHauDo,
   },
   {
     id: 8,
-    name: "Sữa Dê Núi Mộc Châu",
+    name: "Vú Sữa Lò Rèn",
     category: "Premium",
-    description: "Sữa dê tươi nguyên chất từ Mộc Châu",
+    description:
+      "Ngọt lành như dòng sữa, mềm mại và dịu dàng tan chậm trên đầu lưỡi.",
     color: "from-slate-100 to-stone-200",
-    image: durianImg,
+    image: VuSuaLoRen,
   },
   {
     id: 9,
-    name: "Cam Vinh",
+    name: "Đu Đủ Chín",
     category: "Classic",
-    description: "Cam canh Vinh - đặc sản Nghệ An",
+    description:
+      "Vị ngọt dịu, kết cấu kem mượt mà mang đậm năng lượng nhiệt đới rực rỡ.",
     color: "from-orange-300 to-orange-500",
-    image: durianImg,
+    image: DuDuChin,
   },
   {
     id: 10,
-    name: "Nhãn Lồng Hưng Yên",
+    name: "Ổi Nữ Hoàng",
     category: "Seasonal",
-    description: "Nhãn lồng Hưng Yên thơm ngọt",
+    description:
+      "Hương ổi nồng nàn, thanh tao và chuẩn vị trái cây tươi, cực kỳ nịnh miệng.",
     color: "from-amber-100 to-yellow-200",
-    image: durianImg,
+    image: OiNuHoang,
   },
   {
     id: 11,
-    name: "Vải Thiều Bắc Giang",
+    name: "Dưa Lưới Ngọt",
     category: "Seasonal",
-    description: "Vải thiều chín mọng Lục Ngạn",
+    description:
+      "Thơm dịu, ngọt thanh và tinh tế, là lựa chọn hoàn hảo cho những tín đồ sành ăn.",
     color: "from-red-200 to-rose-400",
-    image: durianImg,
+    image: DuaLuoiNgot,
   },
   {
     id: 12,
-    name: "Dưa Hấu Dứa",
+    name: "Chanh Dây",
     category: "Seasonal",
-    description: "Dưa hấu dứa vàng Gia Lai",
+    description:
+      "Chua thanh cực đã, đánh thức mọi giác quan và giải tỏa stress sau giờ làm việc.",
     color: "from-red-300 to-pink-400",
-    image: durianImg,
+    image: ChanhDay,
   },
   {
     id: 13,
-    name: "Chocolate Bến Tre",
+    name: "Khế Chua Ngọt",
     category: "Premium",
-    description: "Cacao Bến Tre 70% hảo hạng",
+    description:
+      "Sự kết hợp lạ miệng đầy thú vị, gợi nhớ ký ức tuổi thơ trong từng tầng hương vị.",
     color: "from-amber-800 to-stone-900",
-    image: durianImg,
+    image: KheChuaNgot,
   },
   {
     id: 14,
-    name: "Matcha Lâm Đồng",
+    name: "Chanh mê ly",
     category: "Premium",
-    description: "Matcha hữu cơ từ Đà Lạt",
+    description:
+      "Cực kỳ sảng khoái, đánh bay cơn nóng Sài Gòn chỉ trong một nốt nhạc.",
     color: "from-green-400 to-emerald-600",
-    image: durianImg,
+    image: ChanhMeLy,
   },
   {
     id: 15,
-    name: "Mật Ong Rừng U Minh",
+    name: "Dừa Bến Tre",
     category: "Premium",
-    description: "Mật ong nguyên chất từ rừng U Minh",
+    description:
+      "Béo thơm thuần khiết từ cốt dừa nguyên chất, đưa bạn về với vùng đất dừa xanh mát.",
     color: "from-amber-300 to-yellow-600",
-    image: durianImg,
-  },
-  {
-    id: 16,
-    name: "Sữa Tươi Nông Trại Đà Lạt",
-    category: "Classic",
-    description: "Sữa bò tươi từ nông trại Đà Lạt",
-    color: "from-blue-50 to-sky-100",
-    image: durianImg,
+    image: DuaBenTre,
   },
   {
     id: 17,
     name: "Amazing Melon",
     category: "Signature",
-    description: "Melon mát lạnh phối nhiều viên gelato thủ công",
+    description: "Mo ta",
     color: "from-lime-200 to-emerald-300",
     image: melonImg,
   },
@@ -150,7 +167,7 @@ const gelatoFlavors = [
     id: 18,
     name: "Mangosteen Delight",
     category: "Signature",
-    description: "Chén gelato đa vị với điểm nhấn măng cụt",
+    description: "Mo ta",
     color: "from-purple-200 to-pink-300",
     image: mangosteenDelightImg,
   },
@@ -158,13 +175,20 @@ const gelatoFlavors = [
     id: 19,
     name: "Papaya Paradise",
     category: "Signature",
-    description: "Gelato trái cây nhiệt đới phối viên đu đủ",
+    description: "Mo ta",
     color: "from-amber-200 to-orange-300",
     image: papayaImg,
   },
 ];
 
 const categories = ["All", "Classic", "Seasonal", "Premium", "Signature"];
+
+const categoryColors = {
+  Classic: { bg: "bg-amber-100", text: "text-amber-800" },
+  Seasonal: { bg: "bg-green-100", text: "text-green-800" },
+  Premium: { bg: "bg-yellow-100", text: "text-yellow-800" },
+  Signature: { bg: "bg-purple-100", text: "text-purple-800" },
+};
 
 export default function Menu() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -225,7 +249,9 @@ export default function Menu() {
                 )}
               </div>
               <div className="p-6">
-                <div className="inline-block px-3 py-1 bg-pink-100 text-pink-600 text-sm font-semibold rounded-full mb-3">
+                <div
+                  className={`inline-block px-3 py-1 ${categoryColors[flavor.category]?.bg || "bg-gray-100"} ${categoryColors[flavor.category]?.text || "text-gray-800"} text-sm font-semibold rounded-full mb-3`}
+                >
                   {flavor.category}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">

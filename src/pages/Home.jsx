@@ -6,11 +6,12 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 to-yellow-50">
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br">
         <div className="text-center px-4">
-          <h1 className="text-6xl md:text-8xl font-bold text-pink-600 mb-6">
-            Kem Đi
-          </h1>
+          <img
+            className="group-hover:scale-110 transition-transform rounded-full// pt-1"
+            src="/KEMDI.png"
+          />
           <p className="text-2xl md:text-3xl text-gray-700 mb-8">
             Gelato Nghệ Thuật Thủ Công
           </p>
@@ -35,9 +36,9 @@ export default function Home() {
       </section>
 
       {/* Feature Highlights */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 from-pink-50 to-yellow-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div className="text-center p-8 bg-white// rounded-2xl shadow-lg hover:shadow-xl transition">
             <div className="text-5xl mb-4">🍨</div>
             <h3 className="text-2xl font-bold text-gray-800 mb-3">
               16 Hương Vị
@@ -46,7 +47,7 @@ export default function Home() {
               Gelato thủ công từ nông sản Việt Nam tươi ngon
             </p>
           </div>
-          <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div className="text-center p-8 bg-white// rounded-2xl shadow-lg hover:shadow-xl transition">
             <div className="text-5xl mb-4">🎨</div>
             <h3 className="text-2xl font-bold text-gray-800 mb-3">
               Nghệ Thuật
@@ -55,7 +56,7 @@ export default function Home() {
               Tạo hình kem độc đáo, sáng tạo không giới hạn
             </p>
           </div>
-          <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div className="text-center p-8 bg-white// rounded-2xl shadow-lg hover:shadow-xl transition">
             <div className="text-5xl mb-4">🌾</div>
             <h3 className="text-2xl font-bold text-gray-800 mb-3">Nguồn Gốc</h3>
             <p className="text-gray-600">
