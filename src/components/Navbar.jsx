@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
   { path: "/", label: "Trang Chủ" },
-  { path: "/menu", label: "Menu" },
   { path: "/story", label: "Câu Chuyện" },
+  { path: "/menu", label: "Menu" },
   { path: "/artist", label: "Gelato Artist" },
   { path: "/contact", label: "Liên Hệ" },
 ];
